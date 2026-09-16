@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MPI IPAS - Mitigasi dan Kesiapsiagaan Bencana</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#17324d;--muted:#5f7183;--accent:#1f6f8b;--accent2:#e8f3f7;--good:#2f855a;--bad:#c53030;--line:#d9e2ea}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:900px;margin:0 auto;padding:22px}.hero{background:linear-gradient(135deg,#174a63,#2c7a9b);color:#fff;border-radius:18px;padding:26px;box-shadow:0 8px 24px #123a4a22}
+.hero h1{margin:0 0 8px;font-size:28px}.hero p{margin:6px 0;line-height:1.5}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.nav button{border:1px solid var(--line);background:#fff;color:var(--ink);padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:700}.nav button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+section{display:none}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.step{padding:14px;border-radius:12px;background:var(--accent2);border:1px solid #cfe4ec}.step b{display:block;margin-bottom:6px}.quiz-q{padding:14px 0;border-bottom:1px solid var(--line)}.quiz-q:last-child{border-bottom:0}
+label{display:block;margin:8px 0;padding:9px;border:1px solid var(--line);border-radius:10px;cursor:pointer}.btn{border:0;background:var(--accent);color:#fff;padding:12px 16px;border-radius:10px;cursor:pointer;font-weight:700}.btn.secondary{background:#52657a}.result{margin-top:15px;padding:14px;border-radius:12px;background:#eef7f1;display:none}.good{color:var(--good);font-weight:700}.bad{color:var(--bad);font-weight:700}
+ul{line-height:1.7} .footer{color:var(--muted);font-size:13px;text-align:center;margin:20px 0}
+@media(max-width:600px){.hero h1{font-size:23px}.wrap{padding:14px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>IPAS SD: Mitigasi & Kesiapsiagaan Bencana</h1>
+    <p><b>Materi:</b> Mengenal jenis bencana dan prosedur evakuasi yang aman.</p>
+    <p>Belajar dengan membaca, mencoba skenario, lalu menguji pemahaman melalui kuis.</p>
+  </div>
+
+  <div class="nav">
+    <button class="active" data-tab="materi">Materi</button>
+    <button data-tab="evakuasi">Simulasi Evakuasi</button>
+    <button data-tab="kuis">Kuis Cepat</button>
+    <button data-tab="refleksi">Refleksi</button>
+  </div>
+
+  <section id="materi" style="display:block">
+    <div class="card">
+      <h2>1. Apa itu bencana?</h2>
+      <p>Bencana adalah peristiwa yang dapat mengganggu kehidupan masyarakat dan menimbulkan kerugian. Di lingkungan sekolah, kita perlu mengenali bahaya dan mengetahui tindakan aman sebelum, saat, dan setelah bencana.</p>
+    </div>
+    <div class="card">
+      <h2>2. Kenali beberapa jenis bencana</h2>
+      <div class="grid">
+        <div class="step"><b>Gempa bumi</b>Jatuhkan badan dengan aman, lindungi kepala, dan berlindung di tempat yang relatif terlindungi.</div>
+        <div class="step"><b>Banjir</b>Menjauh dari arus air, ikuti arahan guru, dan menuju tempat aman/lebih tinggi sesuai jalur evakuasi.</div>
+        <div class="step"><b>Kebakaran</b>Tetap tenang, beri tahu guru, jauhi sumber api/asap, dan keluar melalui jalur evakuasi.</div>
+        <div class="step"><b>Longsor</b>Menjauh dari lereng yang berisiko dan mengikuti arahan menuju tempat yang aman.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>3. Prinsip kesiapsiagaan</h2>
+      <ul>
+        <li>Kenali potensi bahaya di sekitar sekolah.</li>
+        <li>Ketahui jalur evakuasi dan titik kumpul.</li>
+        <li>Ikuti instruksi guru/fasilitator dan jangan berdesakan.</li>
+        <li>Tolong teman dengan cara aman dan jangan kembali mengambil barang.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="evakuasi">
+    <div class="card">
+      <h2>Simulasi: Apa yang kamu lakukan?</h2>
+      <p>Pilih tindakan yang paling aman untuk setiap situasi.</p>
+      <div class="quiz-q"><b>Situasi 1 — Gempa terasa saat belajar.</b>
+        <label><input type="radio" name="s1" value="0"> Berlari keluar kelas secepat mungkin tanpa melihat sekitar.</label>
+        <label><input type="radio" name="s1" value="1"> Lindungi kepala, berlindung, lalu evakuasi setelah kondisi memungkinkan sesuai arahan guru.</label>
+      </div>
+      <div class="quiz-q"><b>Situasi 2 — Tercium asap dari arah koridor.</b>
+        <label><input type="radio" name="s2" value="1"> Beri tahu guru, menjauh dari asap, dan mengikuti jalur evakuasi.</label>
+        <label><input type="radio" name="s2" value="0"> Kembali ke kelas untuk mengambil tas terlebih dahulu.</label>
+      </div>
+      <div class="quiz-q"><b>Situasi 3 — Air mulai masuk ke halaman sekolah.</b>
+        <label><input type="radio" name="s3" value="0"> Bermain di dekat arus air untuk melihat kedalamannya.</label>
+        <label><input type="radio" name="s3" value="1"> Menjauh dari arus dan mengikuti arahan menuju tempat aman.</label>
+      </div>
+      <button class="btn" id="cekSimulasi" type="button">Cek Jawaban</button>
+      <div class="result" id="simResult" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="kuis">
+    <div class="card">
+      <h2>Kuis Cepat</h2>
+      <div class="quiz-q"><b>1. Mengapa kita perlu mengetahui titik kumpul?</b>
+        <label><input type="radio" name="q1" value="1"> Agar warga sekolah dapat berkumpul di tempat yang lebih aman setelah evakuasi.</label>
+        <label><input type="radio" name="q1" value="0"> Agar mudah kembali mengambil barang.</label>
+      </div>
+      <div class="quiz-q"><b>2. Saat evakuasi, perilaku yang tepat adalah...</b>
+        <label><input type="radio" name="q2" value="1"> Tertib, mengikuti arahan, dan tidak saling mendorong.</label>
+        <label><input type="radio" name="q2" value="0"> Berlari sambil mendahului teman.</label>
+      </div>
+      <div class="quiz-q"><b>3. Setelah sampai di titik kumpul...</b>
+        <label><input type="radio" name="q3" value="1"> Tetap bersama kelompok dan menunggu instruksi.</label>
+        <label><input type="radio" name="q3" value="0"> Pulang sendiri tanpa memberi tahu guru.</label>
+      </div>
+      <button class="btn" id="cekKuis" type="button">Nilai Kuis</button>
+      <div class="result" id="quizResult" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="refleksi">
+    <div class="card">
+      <h2>Refleksi Belajar</h2>
+      <p>Jawab secara lisan atau tuliskan di buku:</p>
+      <ol>
+        <li>Apa satu hal baru yang kamu pelajari hari ini?</li>
+        <li>Di mana titik kumpul sekolahmu?</li>
+        <li>Apa tindakan yang akan kamu lakukan agar tetap aman saat bencana?</li>
+      </ol>
+      <p><b>Pesan utama:</b> Kenali bahayanya, pahami jalur evakuasinya, tetap tenang, dan ikuti arahan guru.</p>
+    </div>
+  </section>
+
+  <div class="footer">MPI IPAS • Kelas V • Mitigasi dan Kesiapsiagaan Bencana di Lingkungan Sekolah</div>
+</div>
+<script>
+(function(){
+  const tabs=document.querySelectorAll('.nav button'), sections=document.querySelectorAll('section');
+  tabs.forEach(btn=>btn.addEventListener('click',()=>{
+    tabs.forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+    sections.forEach(s=>s.style.display=s.id===btn.dataset.tab?'block':'none');
+  }));
+  function score(prefix,n){
+    let s=0, answered=0;
+    for(let i=1;i<=n;i++){
+      const c=document.querySelector('input[name="'+prefix+i+'"]:checked');
+      if(c){answered++; s+=Number(c.value);}
+    }
+    return {s,answered};
+  }
+  document.getElementById('cekSimulasi').addEventListener('click',()=>{
+    const r=score('s',3), box=document.getElementById('simResult');
+    box.style.display='block';
+    if(r.answered<3){box.innerHTML='<span class="bad">Lengkapi semua situasi terlebih dahulu.</span>';return;}
+    box.innerHTML='<span class="good">Skor simulasi: '+r.s+'/3.</span> '+(r.s===3?'Hebat! Pilihanmu sudah aman dan tepat.':'Mari pelajari kembali prinsip evakuasi, lalu coba lagi.');
+  });
+  document.getElementById('cekKuis').addEventListener('click',()=>{
+    const r=score('q',3), box=document.getElementById('quizResult');
+    box.style.display='block';
+    if(r.answered<3){box.innerHTML='<span class="bad">Jawab semua soal terlebih dahulu.</span>';return;}
+    box.innerHTML='<span class="good">Nilai: '+Math.round(r.s/3*100)+'/100.</span> '+(r.s>=2?'Pemahamanmu sudah baik.':'Yuk baca kembali materi dan coba lagi.');
+  });
+})();
+</script>
+</body>
+</html>
